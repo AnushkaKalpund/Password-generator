@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator - Jquery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container" class="container">
+        <h1 class="title">CREATE YOUR OWN SECURED PASSWORDS!</h1>
+        <h3 class="subtitle">Password Generator</h3>
+        <div id="inputContainer" class="input-container">
+            <label class="label">Password Length:</label>
+            <input type="number" min="8" max="32" value="12" class="input" id="passwordLength" />
+        </div>
+        <div id="checkboxContainer" class="checkbox-container">
+            <label><input type="checkbox" id="useSymbols" checked /> Symbols </label>
+            <label><input type="checkbox" id="useNumbers" checked /> Numbers </label>
+            <label><input type="checkbox" id="useLowerCase" checked /> LowerCase </label>
+            <label><input type="checkbox" id="useUpperCase" checked /> UpperCase </label>
+        </div>
+        <button class="generate-button" id="generatePassword">
+            Generate Password
+        </button>
+        <button class="regenerate-button" id="regeneratePassword">
+            Regenerate Password
+        </button>
+        <div id="generatedPasswordContainer" class="generated-password-container">
+            <div class="input-container">
+                <label class="label">Generated Password:</label>
+                <input type="password" id="generatedPassword" readonly class="input" />
+                <button class="copy-button" id="copyToClipboard">
+                    Copy
+                </button>
+                <button class="visibility-button" id="toggleVisibility">
+                    Show Password
+                </button>
+            </div>
+        </div>
+        <p id="passwordStrength" class="password-strength"></p>
+        <p id="successMessage" class="success-message"></p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
